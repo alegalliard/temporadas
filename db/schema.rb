@@ -10,17 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022155803) do
+ActiveRecord::Schema.define(version: 20171023011938) do
 
-  create_table "properties", force: :cascade do |t|
-    t.string "title"
-    t.string "property_location"
-    t.string "property_type"
-    t.integer "rooms"
-    t.decimal "daily_rate"
-    t.string "photo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+# Could not dump table "properties" because of following StandardError
+#   Unknown type 'minimum_rent_days' for column 'minimun_rent_days'
 
 end

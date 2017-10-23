@@ -1,0 +1,22 @@
+<%= form_for @property do |f| %>
+  <%= f.label :title, 'Título' %>
+  <%= f.text_field :title %>
+
+  <%= f.label :property_location, 'Localização' %>
+  <%= f.text_field :property_location %>
+
+  <%= f.label :area, 'Tamanho (m²)' %>
+  <%= f.text_field :area %>
+
+  <%= f.label :property_type, 'Tipo do Imóvel' %>
+  <%= f.text_field :property_type %>
+
+  <%= f.label :rooms, 'Quantidade de quartos' %>
+  <%= f.text_field :rooms %>
+
+  <%= f.label :maximum_occupancy, 'Máximo de pessoas' %>
+  <%= f.text_field :maximum_occupancy %>
+
+  <%= f.label :minimum_rent_days, 'Mínimo de dias para locação' %>
+  <%= f.text_field :minimum_rent_days %>
+<% end %>
