@@ -19,4 +19,21 @@
 
   <%= f.label :minimum_rent_days, 'Mínimo de dias para locação' %>
   <%= f.text_field :minimum_rent_days %>
+
+  <%= f.label :maximum_rent_days, 'Máximo de dias para locação' %>
+  <%= f.text_field :maximum_rent_days %>
+
+  <%= f.label :daily_rate, 'Valor padrão da diária' %>
+  <%= f.text_field :daily_rate %>
+
+  <%= f.label :photo, 'Foto' %>
+  <%= f.text_field :photo %>
+
+  <%= f.label :description, 'Descrição' %>
+  <%= f.text_area :description %>
+
+  <%= f.label :usage_rules, 'Regras de uso' %>
+  <%= f.text_field :usage_rules %>
+
+  <%= f.submit 'Cadastrar' %>
 <% end %>
