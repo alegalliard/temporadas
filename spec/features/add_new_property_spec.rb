@@ -59,4 +59,27 @@ feature 'visitor adds a new property' do
     click_on 'Voltar'
 
   end
+
+  scenario 'and validates fields' do
+    visit root_path
+
+    click_on 'Anunciar um imóvel'
+
+    fill_in 'Título', with: ''
+    fill_in 'Localização', with: ''
+    fill_in 'Tamanho (m²)', with: ''
+    fill_in 'Tipo do Imóvel', with: ''
+    fill_in 'Quantidade de quartos', with: ''
+    fill_in 'Máximo de pessoas', with: ''
+    fill_in 'Mínimo de dias para locação', with: ''
+    fill_in 'Máximo de dias para locação', with: ''
+    fill_in 'Valor padrão da diária', with: ''
+    fill_in 'Foto', with: ''
+    fill_in 'Descrição', with: ''
+    fill_in 'Regras de uso', with: ''
+
+    click_on 'Cadastrar'
+
+    expect(page).to have_css('li.error', text: 'Preencha todos os campos corretamente')
+  end
 end

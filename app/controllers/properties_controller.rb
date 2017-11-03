@@ -7,6 +7,8 @@ class PropertiesController < ApplicationController
     if @property.save
       flash[:notice] = 'Imóvel cadastrado com sucesso!'
       redirect_to @property
+    else
+      render :new
     end
   end
   def show
