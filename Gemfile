@@ -44,6 +44,8 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
+  gem 'factory_bot_rails'
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :development do

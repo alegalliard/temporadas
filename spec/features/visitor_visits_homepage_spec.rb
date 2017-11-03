@@ -8,7 +8,15 @@ feature 'visitor visits homepage' do
                                 property_type: 'Casa na praia',
                                 rooms: 2,
                                 daily_rate: 100,
-                                photo: '/areia.jpg')
+                                photo: '/areia.jpg',
+                                maximum_occupancy: 10,
+                                maximum_rent_days: 30,
+                                minimum_rent_days: 2,
+                                area: 200,
+                                description:'Era uma casa muito engraçada',
+                                usage_rules: 'Não pode crianças'
+                                )
+
     visit root_path
 
     expect(page).to have_css('h1', text: 'Aluguel de temporadas')
