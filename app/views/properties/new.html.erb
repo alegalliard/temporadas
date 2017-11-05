@@ -6,42 +6,44 @@
   </ul>
 <% end %>
 
-<%= form_for @property do |f| %>
-  <%= f.label :title, 'Título' %>
-  <%= f.text_field :title %>
-
-  <%= f.label :property_location, 'Localização' %>
-  <%= f.text_field :property_location %>
-
-  <%= f.label :area, 'Tamanho (m²)' %>
-  <%= f.text_field :area %>
-
-  <%= f.label :property_type, 'Tipo do Imóvel' %>
-  <%= f.text_field :property_type %>
-
-  <%= f.label :rooms, 'Quantidade de quartos' %>
-  <%= f.text_field :rooms %>
-
-  <%= f.label :maximum_occupancy, 'Máximo de pessoas' %>
-  <%= f.text_field :maximum_occupancy %>
-
-  <%= f.label :minimum_rent_days, 'Mínimo de dias para locação' %>
-  <%= f.text_field :minimum_rent_days %>
-
-  <%= f.label :maximum_rent_days, 'Máximo de dias para locação' %>
-  <%= f.text_field :maximum_rent_days %>
-
-  <%= f.label :daily_rate, 'Valor padrão da diária' %>
-  <%= f.text_field :daily_rate %>
-
-  <%= f.label :photo, 'Foto' %>
-  <%= f.text_field :photo %>
-
-  <%= f.label :description, 'Descrição' %>
-  <%= f.text_area :description %>
-
-  <%= f.label :usage_rules, 'Regras de uso' %>
-  <%= f.text_field :usage_rules %>
-
-  <%= f.submit 'Cadastrar' %>
+<%= form_for @property, html: { multipart: true } do |f| %>
+  <fieldset>
+    <%= f.label :title, 'Título' %>
+    <%= f.text_field :title %>
+  <br>
+    <%= f.label :property_location, 'Localização' %>
+    <%= f.text_field :property_location %>
+  <br>
+    <%= f.label :area, 'Tamanho (m²)' %>
+    <%= f.text_field :area %>
+  <br>
+    <%= f.label :property_type, 'Tipo do Imóvel' %>
+    <%= f.text_field :property_type %>
+  <br>
+    <%= f.label :rooms, 'Quantidade de quartos' %>
+    <%= f.text_field :rooms %>
+  <br>
+    <%= f.label :maximum_occupancy, 'Máximo de pessoas' %>
+    <%= f.text_field :maximum_occupancy %>
+  <br>
+    <%= f.label :minimum_rent_days, 'Mínimo de dias para locação' %>
+    <%= f.text_field :minimum_rent_days %>
+  <br>
+    <%= f.label :maximum_rent_days, 'Máximo de dias para locação' %>
+    <%= f.text_field :maximum_rent_days %>
+  <br>
+    <%= f.label :daily_rate, 'Valor padrão da diária' %>
+    <%= f.text_field :daily_rate %>
+  <br>
+    <%= f.label :photo, 'Foto' %>
+    <%= f.file_field :photo %>
+  <br>
+    <%= f.label :description, 'Descrição' %>
+    <%= f.text_area :description %>
+  <br>
+    <%= f.label :usage_rules, 'Regras de uso' %>
+    <%= f.text_field :usage_rules %>
+  <br>
+    <%= f.submit 'Cadastrar' %>
+  </fieldset>
 <% end %>

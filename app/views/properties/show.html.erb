@@ -6,11 +6,13 @@
 
 <div>
     <h1 class="mt-5 text-success"><%= @property.title %></h1>
-    <dt>Descrição:</dt> <dd><%= @property.description %></dd>
-    <dt>Localização:</dt> <dd><%= @property.property_location %></dd>
-
+    <%= image_tag @property.photo %>
     <h2>Detalhes</h2>
     <dl>
+      <dt>Descrição:</dt>
+      <dd><%= @property.description %></dd>
+      <dt>Localização:</dt>
+      <dd><%= @property.property_location %></dd>
       <dt>Tamanho (m²):</dt>
       <dd><%= @property.area %> m²</dd>
       <dt>Tipo do Imóvel</dt>
@@ -28,8 +30,5 @@
       <dd><%= number_to_currency(@property.daily_rate) %></dd>
       <dt>Regras de uso:</dt>
       <dd><%= @property.usage_rules %></dd>
-
-      <dt>Foto</dt>
-      <dd><%= @property.photo %></dd>
     </dl>
   </div>

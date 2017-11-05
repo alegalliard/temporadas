@@ -2,7 +2,7 @@
 <%= link_to 'Anunciar um imóvel', new_property_path %>
 <% if @properties.any? %>
   <% @properties.each do |property| %>
-    <div><%= property.photo %></div>
+    <div><%= image_tag property.photo %></div>
     <h2><%= property.title %></h2>
     <dl>
       <dt><%= t('location_label') %>:</dt> <dd><%= property.property_location %></dd>

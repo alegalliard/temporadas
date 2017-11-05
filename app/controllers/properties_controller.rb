@@ -16,8 +16,9 @@ class PropertiesController < ApplicationController
   end
   private
   def property_params
-    params.require(:property).permit(:property_location, :area, :title, :description,
-                                   :daily_rate, :rooms, :minimum_rent_days,
+    params.require(:property).permit(:property_location, :area, :title,
+                                  :description, :daily_rate, :rooms,
+                                  :minimum_rent_days,
                                    :maximum_rent_days, :photo,
                                    :maximum_occupancy, :usage_rules,
                                    :property_type)

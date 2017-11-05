@@ -15,14 +15,14 @@ feature 'visitor adds a new property' do
     fill_in 'Mínimo de dias para locação', with: '2'
     fill_in 'Máximo de dias para locação', with: '15'
     fill_in 'Valor padrão da diária', with: '150'
-    fill_in 'Foto', with: '/casa.jpg'
+    attach_file 'Foto', "#{Rails.root}/spec/image/casa-praia.jpg"
     fill_in 'Descrição', with: 'Essa é uma casa muito engraçada'
     fill_in 'Regras de uso', with: 'Pode trazer até dois cachorros'
 
     click_on 'Cadastrar'
 
     expect(page).to have_css('h1', text: 'Casa na praia')
-    expect(page).to have_css('div', text: '/casa.jpg')
+    expect(page).to have_xpath("//img[contains(@src,'casa-praia.jpg')]")
 
     expect(page).to have_css('dt', text: 'Localização:')
     expect(page).to have_css('dd', text: 'Santos - SP')
@@ -74,7 +74,7 @@ feature 'visitor adds a new property' do
     fill_in 'Mínimo de dias para locação', with: ''
     fill_in 'Máximo de dias para locação', with: ''
     fill_in 'Valor padrão da diária', with: ''
-    fill_in 'Foto', with: ''
+    #fill_in 'Foto', with: ''
     fill_in 'Descrição', with: ''
     fill_in 'Regras de uso', with: ''
 
